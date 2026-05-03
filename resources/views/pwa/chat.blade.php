@@ -207,10 +207,10 @@
                     </p>
                     <div class="space-y-1 max-h-48 overflow-y-auto custom-scrollbar">
                         @foreach($allowedModels as $modelId)
-                            <button onclick="changeModel('{{ $modelId }}', '{{ $modelNames[$modelId] }}')"
+                            <button onclick="changeModel('{{ $modelId }}', '{{ $modelNames[$modelId] ?? $modelId }}')"
                                 class="w-full text-left px-4 py-3 rounded-2xl hover:bg-slate-50 transition-colors flex items-center justify-between {{ ($conversation->model == $modelId) ? 'bg-blue-50' : '' }}">
                                 <span
-                                    class="text-[13px] font-bold {{ ($conversation->model == $modelId) ? 'text-blue-600' : 'text-slate-700' }}">{{ $modelNames[$modelId] }}</span>
+                                    class="text-[13px] font-bold {{ ($conversation->model == $modelId) ? 'text-blue-600' : 'text-slate-700' }}">{{ $modelNames[$modelId] ?? $modelId }}</span>
                                 @if($conversation->model == $modelId)
                                     <i data-lucide="check" class="w-4 h-4 text-blue-600"></i>
                                 @endif
@@ -223,7 +223,7 @@
                     <button onclick="toggleModelSelector()"
                         class="mb-2 left-6 -bottom-0 transform translate-y-[50%] flex items-center gap-1.5 px-3 py-1.5 bg-black rounded-full transition-all active:scale-95 border border-gray-200 shadow-lg">
                         <span id="current-model-name"
-                            class="text-[8px] font-black uppercase tracking-tight">{{ $modelNames[$conversation->model] ?? 'Model' }}</span>
+                            class="text-[8px] font-black uppercase tracking-tight">{{ $modelNames[$conversation->model] ?? $conversation->model ?? 'Model' }}</span>
                         <i data-lucide="chevron-up" class="w-3 h-3 text-white/50" id="model-chevron"></i>
                     </button>
                     <div class="flex ">

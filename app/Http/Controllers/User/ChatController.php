@@ -50,12 +50,14 @@ class ChatController extends Controller
         
         // Human readable names for the selector
         $modelNames = [
+            'openai/gpt-3.5-turbo' => 'GPT-3.5 Turbo',
             'openai/gpt-4o-mini' => 'GPT-4o Mini',
             'openai/gpt-5' => 'GPT-5 (Future)',
             'openai/gpt-5-mini' => 'GPT-5 Mini',
             'openai/gpt-5.1' => 'GPT-5.1',
             'google/gemini-2.5-flash' => 'Gemini 2.5 Flash',
             'google/gemini-2.5-flash-lite' => 'Gemini 2.5 Flash Lite',
+            'google/gemini-2.0-flash-001' => 'Gemini 2.0 Flash',
         ];
 
         $messages = $conversation->messages()->orderBy('created_at')->get();
