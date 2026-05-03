@@ -1,7 +1,7 @@
 @props(['active' => 'home'])
 
 <div
-    style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 5000; padding: 12px 24px 12px; background: linear-gradient(to top, #F2F2F2, rgba(242, 242, 242, 0.95), transparent); pointer-events: none;">
+    style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 5000; padding: 12px 24px 12px; background: linear-gradient(to top, #F2F2F2, rgba(242, 242, 242, 0.95), transparent); pointer-events: none; margin-bottom: 0px">
     <div class="max-w-md mx-auto flex justify-between items-center pointer-events-auto">
         <!-- Left Pill -->
         <div class="flex items-center space-x-1 p-2 bg-black rounded-full shadow-2xl gap-2"

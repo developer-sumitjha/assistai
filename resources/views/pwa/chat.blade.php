@@ -151,7 +151,7 @@
         <main id="chat-container" class="flex-1 px-6 pb-32 space-y-8 overflow-y-auto"
             style="padding-top: 120px !important;">
             <!-- Empty State / Greeting (Matches Homepage Theme) -->
-            @if($messages->count() <= 1)
+            <!-- @if($messages->count() <= 1)
                 <div class="py-12 mb-4 animate-in fade-in slide-in-from-bottom-8 duration-700">
                     <div
                         class="w-16 h-16 bg-white rounded-3xl flex items-center justify-center text-blue-600 shadow-sm border border-slate-50 mb-6">
@@ -164,7 +164,7 @@
                     <p class="text-slate-400 text-sm mt-4 max-w-[240px]">I'm here to help you with anything. Just type your
                         message below to get started.</p>
                 </div>
-            @endif
+            @endif -->
 
             @foreach($messages as $msg)
                 @if($msg->role === 'system') @continue @endif
@@ -228,7 +228,7 @@
                     </button>
                     <div class="flex ">
                         <textarea id="message-input" rows="1" placeholder="Ask anything..."
-                            class="w-full pl-6 pr-14 pt-5 pb-5 border-none shadow-[0_8px_30px_rgba(0,0,0,0.06)] focus:ring-0 placeholder:text-slate-300 text-[15px] transition-all resize-none overflow-hidden min-h-[64px]"></textarea>
+                            class="w-full pl-6 pr-14 pt-5 pb-5 border-none focus:ring-0 placeholder:text-slate-300 text-[15px] transition-all resize-none overflow-hidden min-h-[64px]"></textarea>
 
 
                         <button onclick="handleSend()" id="send-btn"
