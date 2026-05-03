@@ -2,7 +2,7 @@
     style="display: none; opacity: 0; transition: opacity 0.3s ease;" onclick="toggleFeaturePopup()"></div>
 
 <div id="feature-popup" class="fixed left-0 right-0 bottom-0 z-[6001] flex flex-col"
-    style="background: #fafafa; height: 80vh; transform: translateY(110%); transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1); box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.2); border-radius: 32px 32px 0px 0px;">
+    style="background: #fafafa; height: 80vh; transform: translateY(110%); transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1); box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.2); border-radius: 32px 32px 0px 0px; margin-bottom: 0px">
 
     <!-- Drag Handle -->
     <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-6 shrink-0" onclick="toggleFeaturePopup()"></div>
