@@ -22,7 +22,7 @@
             </div>
             
             <div class="pt-6 border-t border-gray-50 flex items-center justify-between">
-                <p class="text-xs text-gray-400 font-bold uppercase tracking-widest">Account Created: {{ Auth::user()->created_at->format('M Y') }}</p>
+                <p class="text-xs text-gray-400 font-bold uppercase tracking-widest">Account Created: {{ Auth::user()->created_at?->format('M Y') ?? 'N/A' }}</p>
                 <button class="flex items-center gap-2 text-primary-purple font-bold text-sm uppercase tracking-widest hover:underline transition-all">
                     Edit Profile
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

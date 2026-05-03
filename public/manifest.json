@@ -1,0 +1,21 @@
+{
+    "name": "AssistAI",
+    "short_name": "AssistAI",
+    "background_color": "#F2F2F2",
+    "display": "standalone",
+    "description": "Your Premium AI Companion",
+    "theme_color": "#2563EB",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/pwa-icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/pwa-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

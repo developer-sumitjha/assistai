@@ -94,7 +94,7 @@
                                 <span class="text-gray-900 font-black">{{ number_format($user->credits, 2) }}</span>
                             </div>
                         </td>
-                        <td class="py-6 px-4 text-gray-400">{{ $user->created_at->format('M d, Y') }}</td>
+                        <td class="py-6 px-4 text-gray-400">{{ $user->created_at?->format('M d, Y') ?? 'N/A' }}</td>
                         <td class="py-6 px-4 text-right">
                             <div class="flex items-center justify-end gap-3">
                                 <button onclick="openPasswordModal({{ $user->id }}, '{{ $user->name }}')" 

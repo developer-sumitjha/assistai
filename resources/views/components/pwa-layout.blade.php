@@ -7,12 +7,8 @@
 
     <title>{{ $title ?? config('app.name', 'AssistAI') }}</title>
 
-    <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#2563EB">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="AssistAI">
-    <link rel="apple-touch-icon" href="/pwa-icon.png">
+    <!-- PWA -->
+    @laravelPWA
 
     <!-- Fonts - Modern & Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,13 +41,5 @@
         {{ $slot }}
     </div>
 
-    <!-- PWA Service Worker Registration (handled by vite-plugin-pwa) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js', { scope: '/' });
-            });
-        }
-    </script>
 </body>
 </html>
