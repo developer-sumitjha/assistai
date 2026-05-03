@@ -221,18 +221,18 @@
 
                 <div class="relative group bg-white p-4 rounded-2xl">
                     <button onclick="toggleModelSelector()"
-                        class="mb-2 left-6 -bottom-0 transform translate-y-[50%] flex items-center gap-1.5 px-3 py-1.5 bg-black rounded-full transition-all active:scale-95 border border-gray-200 shadow-lg">
+                        class="mb-2 left-6 -bottom-0 transform translate-y-[50%] flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all active:scale-95 border border-gray-200 shadow-lg">
                         <span id="current-model-name"
                             class="text-[8px] font-black uppercase tracking-tight">{{ $modelNames[$conversation->model] ?? $conversation->model ?? 'Model' }}</span>
                         <i data-lucide="chevron-up" class="w-3 h-3 text-white/50" id="model-chevron"></i>
                     </button>
                     <div class="flex ">
                         <textarea id="message-input" rows="1" placeholder="Ask anything..."
-                            class="w-full pl-6 pr-14 pt-5 pb-5 bg-white border-none shadow-[0_8px_30px_rgba(0,0,0,0.06)] focus:ring-0 placeholder:text-slate-300 text-[15px] transition-all resize-none overflow-hidden min-h-[64px]"></textarea>
+                            class="w-full pl-6 pr-14 pt-5 pb-5 border-none shadow-[0_8px_30px_rgba(0,0,0,0.06)] focus:ring-0 placeholder:text-slate-300 text-[15px] transition-all resize-none overflow-hidden min-h-[64px]"></textarea>
 
 
                         <button onclick="handleSend()" id="send-btn"
-                            class="right-2 top-2 w-12 h-12 bg-black text-black rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-all disabled:opacity-20">
+                            class="right-2 top-2 w-12 h-12 text-black rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-all disabled:opacity-20">
                             <i data-lucide="arrow-right" class="w-6 h-6"></i>
                         </button>
                     </div>
