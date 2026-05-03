@@ -26,9 +26,9 @@
             <!-- Greeting Section -->
             <div class="mb-10" style="margin-top: 25vh !important;">
                 <h2 class="font-medium text-slate-400 tracking-tight"
-                    style="font-size: 24px !important; line-height: 1;">Hi {{ auth()->user()->name }},</h2>
+                    style="font-size: 18px !important; line-height: 1;">Hi {{ auth()->user()->name }},</h2>
                 <h1 class="font-bold text-slate-900 tracking-tighter mt-2"
-                    style="font-size: 28px !important; line-height: 1;">How can I help you today?</h1>
+                    style="font-size: 24px !important; line-height: 1;">How can I help you today?</h1>
             </div>
 
             <!-- Action Cards Grid -->
@@ -39,7 +39,7 @@
                     <div class="mb-8 text-slate-200 group-hover:text-slate-900 transition-colors">
                         <i data-lucide="scan" class="w-10 h-10 stroke-[1.5]"></i>
                     </div>
-                    <h3 class="text-[19px] font-bold text-slate-900">Text to Text</h3>
+                    <h3 class="text-[16px] font-bold text-slate-900">Text to Text</h3>
                     <p class="text-[13px] text-slate-400 mt-1">Smart AI Chat</p>
                 </a>
 
@@ -49,7 +49,7 @@
                     <div class="mb-8 text-slate-200 group-hover:text-slate-900 transition-colors">
                         <i data-lucide="image" class="w-10 h-10 stroke-[1.5]"></i>
                     </div>
-                    <h3 class="text-[19px] font-bold text-slate-900">Text to Image</h3>
+                    <h3 class="text-[16px] font-bold text-slate-900">Text to Image</h3>
                     <p class="text-[13px] text-slate-400 mt-1">AI Generation</p>
                 </a>
 
@@ -59,7 +59,7 @@
                     <div class="mb-8 text-slate-200">
                         <i data-lucide="mic" class="w-10 h-10 stroke-[1.5]"></i>
                     </div>
-                    <h3 class="text-[19px] font-bold text-slate-900">Text to Speech</h3>
+                    <h3 class="text-[16px] font-bold text-slate-900">Text to Speech</h3>
                     <p class="text-[13px] text-slate-400 mt-1">AI Audio</p>
                 </div>
 
@@ -69,7 +69,7 @@
                     <div class="mb-8 text-slate-200">
                         <i data-lucide="sparkles" class="w-10 h-10 stroke-[1.5]"></i>
                     </div>
-                    <h3 class="text-[19px] font-bold text-slate-900">Ask AI</h3>
+                    <h3 class="text-[16px] font-bold text-slate-900">Ask AI</h3>
                     <p class="text-[13px] text-slate-400 mt-1">Your Assistant</p>
                 </div>
 
