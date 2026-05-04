@@ -36,15 +36,15 @@
                 <p class="text-[12px] text-slate-400 mt-1">AI Generation</p>
             </a>
 
-            <!-- Text to Speech -->
-            <div
-                class="bg-white rounded-[32px] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-50 group active:scale-95 transition-all opacity-40">
-                <div class="mb-8 text-slate-200">
-                    <i data-lucide="mic" class="w-10 h-10 stroke-[1.5]"></i>
+            <!-- Image to Image -->
+            <a href="{{ route('user.image_to_image') }}"
+                class="bg-white rounded-[32px] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-50 group active:scale-95 transition-all block">
+                <div class="mb-8 text-slate-200 group-hover:text-slate-900 transition-colors">
+                    <i data-lucide="image-plus" class="w-10 h-10 stroke-[1.5]"></i>
                 </div>
-                <h3 class="text-[17px] font-bold text-slate-900">Text to Speech</h3>
-                <p class="text-[12px] text-slate-400 mt-1">Coming Soon</p>
-            </div>
+                <h3 class="text-[17px] font-bold text-slate-900">Image to Image</h3>
+                <p class="text-[12px] text-slate-400 mt-1">AI Transformation</p>
+            </a>
 
             <!-- Ask AI -->
             <div

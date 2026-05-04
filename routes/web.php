@@ -37,6 +37,10 @@ Route::prefix('app')->name('user.')->group(function () {
         // Image Generation Feature
         Route::get('/image', [\App\Http\Controllers\User\ImageController::class, 'index'])->name('image');
         Route::post('/image/generate', [\App\Http\Controllers\User\ImageController::class, 'generate'])->name('image.generate');
+        
+        // Image to Image Feature
+        Route::get('/image-to-image', [\App\Http\Controllers\User\ImageController::class, 'imageToImage'])->name('image_to_image');
+        Route::post('/image-to-image/generate', [\App\Http\Controllers\User\ImageController::class, 'generateFromImage'])->name('image_to_image.generate');
     });
 });
 

@@ -38,8 +38,8 @@ class AdminAiModelController extends Controller
                 'google/gemini-2.0-flash-001' => 'Gemini 2.0 Flash',
             ],
             'image' => [
-                'google/gemini-3.1-flash-image-preview' => 'Gemini 3.1 Flash Image',
-                'google/gemini-3-pro-image-preview' => 'Gemini 3 Pro Image',
+                'google/gemini-3.1-flash-image-preview' => 'Nano Banana 2',
+                'google/gemini-3-pro-image-preview' => 'Nano Banana Pro',
                 'openai/dall-e-3' => 'DALL-E 3',
                 'openai/dall-e-2' => 'DALL-E 2',
                 'stabilityai/stable-diffusion-xl' => 'Stable Diffusion XL',

@@ -10,6 +10,7 @@ class ImageGeneration extends Model
         'user_id',
         'prompt',
         'image_path',
+        'source_image_path',
         'model',
         'credits_spent'
     ];
