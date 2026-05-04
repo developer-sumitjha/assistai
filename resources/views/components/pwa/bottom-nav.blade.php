@@ -7,15 +7,18 @@
         <div class="flex items-center space-x-1 p-2 bg-black rounded-full shadow-2xl gap-2"
             style="background-color: black !important;">
             <a href="{{ route('user.dashboard') }}"
-                class="w-[52px] h-[52px] flex items-center justify-center rounded-full transition-all active:scale-90 {{ $active === 'home' ? 'bg-white/10' : '' }}">
+                class="flex items-center justify-center rounded-full transition-all active:scale-90 {{ $active === 'home' ? 'bg-white/10' : '' }}"
+                style="width:32px;height:32px;">
                 <i data-lucide="home" class="w-5 h-5 text-white"></i>
             </a>
             <a href="{{ route('user.chat') }}"
-                class="w-[52px] h-[52px] flex items-center justify-center rounded-full transition-all active:scale-90 {{ $active === 'chat' ? 'bg-white/10' : '' }}">
+                class="flex items-center justify-center rounded-full transition-all active:scale-90 {{ $active === 'chat' ? 'bg-white/10' : '' }}"
+                style="width:32px;height:32px;">
                 <i data-lucide="message-circle" class="w-5 h-5 text-white"></i>
             </a>
             <a href="{{ route('user.profile') }}"
-                class="w-[52px] h-[52px] flex items-center justify-center rounded-full transition-all active:scale-90 {{ $active === 'profile' ? 'bg-white/10' : '' }}">
+                class="flex items-center justify-center rounded-full transition-all active:scale-90 {{ $active === 'profile' ? 'bg-white/10' : '' }}"
+                style="width:32px;height:32px;">
                 <i data-lucide="user" class="w-5 h-5 text-white"></i>
             </a>
         </div>
