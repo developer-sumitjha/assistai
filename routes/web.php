@@ -61,9 +61,9 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::post('/users/{user}/credits', [\App\Http\Controllers\Admin\AdminCreditController::class, 'manage'])->name('users.credits');
     Route::post('/users/{user}/password', [\App\Http\Controllers\Admin\AdminUserController::class, 'updatePassword'])->name('users.password');
 
-    Route::get('/profile', function () {
+    Route::get('/settings', function () {
         return view('admin.profile');
-    })->name('profile');
+    })->name('settings');
 
     // AI Model Management
     Route::get('/models', [\App\Http\Controllers\Admin\AdminAiModelController::class, 'index'])->name('models');

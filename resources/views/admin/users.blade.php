@@ -1,22 +1,22 @@
 <x-admin-layout>
     <div class="space-y-10">
-        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between" style="justify-content: space-between;">
             <div>
                 <h1 class="text-3xl font-extrabold text-gray-900">Users Management</h1>
                 <p class="text-sm text-gray-500 mt-2">Manage your team, platform users, and credit flow from one place.</p>
             </div>
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div class="flex sm:flex-row items-stretch sm:items-center gap-3">
                 <div class="relative w-full sm:w-auto">
                     <input type="search" placeholder="Search users, email, role..." class="w-full sm:w-80 px-5 py-3 rounded-2xl border border-gray-200 bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-purple/20 focus:border-primary-purple transition-all" />
-                    <svg class="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2m0 0A7.5 7.5 0 103.8 3.8a7.5 7.5 0 0011.999 11.999z"></path></svg>
+                    <svg class="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="right:12px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2m0 0A7.5 7.5 0 103.8 3.8a7.5 7.5 0 0011.999 11.999z"></path></svg>
                 </div>
-                <button type="button" onclick="openNewUserModal()" class="bg-black text-white px-6 py-3 rounded-2xl text-sm font-bold hover:scale-[1.01] active:scale-95 transition-all" style="background-color: #000;">
+                <button type="button" onclick="openNewUserModal()" class="bg-black text-white px-6 py-3 rounded-2xl text-sm font-bold hover:scale-[1.01] active:scale-95 transition-all min-w-fit" style="background-color: #000;min-width: fit-content;">
                     Add New User
                 </button>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div class="card-premium border border-gray-100">
                 <div class="flex items-center justify-between mb-6">
                     <div>
@@ -55,7 +55,7 @@
                 </div>
                 <p class="text-sm text-gray-500">Members active in the last 30 days.</p>
             </div>
-        </div>
+        </div> -->
 
         <div class="card-premium border border-gray-100 p-8">
             @if(session('success'))
@@ -76,7 +76,7 @@
                     <p class="text-sm text-gray-500 mt-1">View and manage accounts, roles, and balances.</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-3">
-                    <button class="bg-primary-purple text-white px-5 py-3 rounded-2xl text-sm font-bold shadow-xl shadow-purple-100 hover:scale-[1.01] active:scale-95 transition-all">
+                    <button class="text-white px-5 py-3 rounded-2xl text-sm font-bold hover:scale-[1.01] active:scale-95 transition-all" style="background-color: #000;">
                         Export CSV
                     </button>
                     <button class="bg-white border border-gray-200 text-gray-700 px-5 py-3 rounded-2xl text-sm font-bold hover:bg-gray-50 transition-all">
@@ -108,7 +108,7 @@
                                     </div>
                                     <div>
                                         <p class="text-gray-900 font-black">{{ $user->name }}</p>
-                                        <p class="text-[11px] text-gray-400 uppercase tracking-[0.3em]">{{ $user->email }}</p>
+                                        <p class="text-[11px] text-gray-400 tracking-[0.3em]">{{ $user->email }}</p>
                                     </div>
                                 </div>
                             </td>

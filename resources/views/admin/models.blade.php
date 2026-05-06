@@ -1,10 +1,8 @@
-<x-admin-layout title="AI Model Management">
-    <div class="max-w-5xl">
-        <div class="mb-12">
-            <h2 class="text-4xl font-black text-gray-900 mb-4">AI Model Management</h2>
-            <p class="text-lg text-gray-500 leading-relaxed">
-                Configure allowed AI engines across different use cases. Each category has its own independent fleet and default starting point.
-            </p>
+<x-admin-layout>
+    <div class="space-y-10">
+        <div>
+            <h1 class="text-3xl font-extrabold text-gray-900">AI Models</h1>
+            <p class="text-sm text-gray-500 mt-2">Configure allowed AI engines across different use cases. Each category has its own independent fleet and default starting point.</p>
         </div>
 
         @if(session('success'))
@@ -16,12 +14,11 @@
             </div>
         @endif
 
-        <form action="{{ route('admin.models.update') }}" method="POST" class="space-y-12">
+        <form action="{{ route('admin.models.update') }}" method="POST" class="space-y-8">
             @csrf
 
             <!-- Text Generation Category -->
-            <section class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-2 h-full bg-purple-500"></div>
+            <div class="card-premium">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 shadow-inner">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,11 +52,10 @@
                         </select>
                     </div>
                 </div>
-            </section>
+            </div>
 
             <!-- Image Generation Category -->
-            <section class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-2 h-full bg-indigo-500"></div>
+            <div class="card-premium">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 shadow-inner">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,11 +89,10 @@
                         </select>
                     </div>
                 </div>
-            </section>
+            </div>
 
             <!-- Video Generation Category -->
-            <section class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden opacity-80 hover:opacity-100 transition-opacity">
-                <div class="absolute top-0 left-0 w-2 h-full bg-amber-500"></div>
+            <div class="card-premium opacity-80 hover:opacity-100 transition-opacity">
                 <div class="flex items-center gap-4 mb-4">
                     <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600 shadow-inner">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -141,7 +136,7 @@
                         </select>
                     </div>
                 </div>
-            </section>
+            </div>
 
             <div class="flex justify-end pt-8">
                 <button type="submit" class="bg-gray-900 text-white px-16 py-6 rounded-3xl font-black text-xl shadow-2xl shadow-gray-200 hover:shadow-gray-300 hover:-translate-y-1 transition-all active:scale-95">
