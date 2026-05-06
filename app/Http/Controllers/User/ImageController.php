@@ -21,8 +21,8 @@ class ImageController extends Controller
         $allowedModels = json_decode($allowedImageModelsRaw, true) ?: ['google/gemini-3.1-flash-image-preview'];
         
         $modelNames = [
-            'google/gemini-3.1-flash-image-preview' => 'Gemini 3.1 Flash Image',
-            'google/gemini-3-pro-image-preview' => 'Gemini 3 Pro Image',
+            'google/gemini-3.1-flash-image-preview' => 'Nano Banana 2',
+            'google/gemini-3-pro-image-preview' => 'Nano Banana Pro',
             'openai/dall-e-3' => 'DALL-E 3',
         ];
 
