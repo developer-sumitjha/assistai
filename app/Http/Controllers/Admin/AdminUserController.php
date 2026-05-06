@@ -25,4 +25,25 @@ class AdminUserController extends Controller
 
         return back()->with('success', "Password for {$user->name} has been updated successfully.");
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email'],
+            'role' => ['required', 'in:admin,user'],
+            'credits' => ['nullable', 'numeric', 'min:0'],
+            'new_password' => ['required', 'confirmed', Password::defaults()],
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'role' => $request->role,
+            'credits' => $request->credits ?? 0,
+            'password' => $request->new_password,
+        ]);
+
+        return redirect()->route('admin.users')->with('success', 'New user created successfully.');
+    }
 }

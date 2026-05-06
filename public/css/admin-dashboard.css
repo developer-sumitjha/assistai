@@ -1,0 +1,118 @@
+:root {
+    --bg-main: #F3F4F6;
+    --sidebar-bg: #FFFFFF;
+    --card-black: #111827;
+    --primary-purple: #7C3AED;
+    --text-muted: #6B7280;
+    --border-color: #E5E7EB;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 280px 1fr 350px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    overflow-y: auto;
+    padding: 2rem 3rem;
+    background: #FFFFFF;
+    border-radius: 40px 0 0 40px;
+    margin-left: -40px; /* Overlap for the rounded effect */
+    z-index: 1;
+    position: relative;
+}
+
+.right-sidebar {
+    background: #FFFFFF;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Custom Cards */
+.card-premium {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-black {
+    background: var(--card-black);
+    color: #FFFFFF;
+    border-radius: 24px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-income { background: #ECFDF5; }
+.card-expense { background: #FFF7ED; }
+.card-saving { background: #EFF6FF; }
+
+/* Buttons */
+.btn-deposit {
+    background: #FFFFFF;
+    color: #111827;
+    border-radius: 12px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+}
+
+.btn-withdraw {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    border-radius: 12px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+}
+
+/* Typography */
+.text-huge {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+/* Charts Placeholder */
+.chart-container {
+    height: 250px;
+    width: 100%;
+}
+
+/* Avatar Group */
+.avatar-group {
+    display: flex;
+    align-items: center;
+    gap: -10px;
+}
+
+.avatar-item {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid #FFFFFF;
+    object-fit: cover;
+}
+
+/* Glassmorphism for specific elements */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}

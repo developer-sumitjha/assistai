@@ -56,6 +56,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         return view('admin.users', compact('users'));
     })->name('users');
 
+    Route::post('/users', [\App\Http\Controllers\Admin\AdminUserController::class, 'store'])->name('users.store');
+
     Route::post('/users/{user}/credits', [\App\Http\Controllers\Admin\AdminCreditController::class, 'manage'])->name('users.credits');
     Route::post('/users/{user}/password', [\App\Http\Controllers\Admin\AdminUserController::class, 'updatePassword'])->name('users.password');
 
