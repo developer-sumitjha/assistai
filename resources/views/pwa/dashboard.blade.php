@@ -33,13 +33,13 @@
 
             <!-- Action Cards Grid -->
             <div class="grid grid-cols-2 gap-4 mb-8">
-                <!-- Text to Text (Chat) -->
+                <!-- Ask AI (formerly Text to Text) -->
                 <a href="{{ route('user.chat.new') }}"
                     class="bg-white rounded-[32px] p-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-50 group active:scale-95 transition-all block">
                     <div class="mb-8 text-slate-200 group-hover:text-slate-900 transition-colors">
-                        <i data-lucide="scan" class="w-10 h-10 stroke-[1.5]"></i>
+                        <i data-lucide="sparkles" class="w-10 h-10 stroke-[1.5]"></i>
                     </div>
-                    <h3 class="text-[16px] font-bold text-slate-900">Text to Text</h3>
+                    <h3 class="text-[16px] font-bold text-slate-900">Ask AI</h3>
                     <p class="text-[13px] text-slate-400 mt-1">Smart AI Chat</p>
                 </a>
 
@@ -63,14 +63,34 @@
                     <p class="text-[13px] text-slate-400 mt-1">AI Transformation</p>
                 </a>
 
-                <!-- Ask AI -->
-                <div
-                    class="bg-white rounded-[32px] p-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-50 group active:scale-95 transition-all">
-                    <div class="mb-8 text-slate-200">
-                        <i data-lucide="sparkles" class="w-10 h-10 stroke-[1.5]"></i>
+                <!-- Text to Speech -->
+                <a href="{{ route('user.tts') }}"
+                    class="bg-white rounded-[32px] p-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-50 group active:scale-95 transition-all block">
+                    <div class="mb-8 text-slate-200 group-hover:text-slate-900 transition-colors">
+                        <i data-lucide="mic" class="w-10 h-10 stroke-[1.5]"></i>
                     </div>
-                    <h3 class="text-[16px] font-bold text-slate-900">Ask AI</h3>
-                    <p class="text-[13px] text-slate-400 mt-1">Your Assistant</p>
+                    <h3 class="text-[16px] font-bold text-slate-900">Text to Speech</h3>
+                    <p class="text-[13px] text-slate-400 mt-1">AI Voice Generation</p>
+                </a>
+
+                <!-- Text to Video -->
+                <div
+                    class="bg-white rounded-[32px] p-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-50 group active:scale-95 transition-all opacity-75">
+                    <div class="mb-8 text-slate-200">
+                        <i data-lucide="video" class="w-10 h-10 stroke-[1.5]"></i>
+                    </div>
+                    <h3 class="text-[16px] font-bold text-slate-900">Text to Video</h3>
+                    <p class="text-[13px] text-slate-400 mt-1">Coming soon</p>
+                </div>
+
+                <!-- Image to Video -->
+                <div
+                    class="bg-white rounded-[32px] p-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-50 group active:scale-95 transition-all opacity-75">
+                    <div class="mb-8 text-slate-200">
+                        <i data-lucide="film" class="w-10 h-10 stroke-[1.5]"></i>
+                    </div>
+                    <h3 class="text-[16px] font-bold text-slate-900">Image to Video</h3>
+                    <p class="text-[13px] text-slate-400 mt-1">Coming soon</p>
                 </div>
 
             </div>

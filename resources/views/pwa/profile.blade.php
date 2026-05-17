@@ -46,6 +46,27 @@
             </div>
         </section>
 
+        <!-- Credits Section -->
+        <section class="space-y-4">
+            <div class="flex items-center space-x-2 px-1">
+                <div class="w-1 h-4 bg-emerald-500 rounded-full"></div>
+                <h4 class="text-xs font-black uppercase tracking-widest text-slate-400">Credit Balance</h4>
+            </div>
+            <div class="p-6 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-[32px] shadow-lg shadow-emerald-200 text-white flex flex-row items-center justify-between">
+                <div>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-100 mb-1">Available</p>
+                    <div class="flex items-baseline space-x-1">
+                        <span class="text-3xl font-black tracking-tight">{{ number_format($user->credits, 2) }}</span>
+                        <span class="text-sm font-bold text-emerald-200">CR</span>
+                    </div>
+                </div>
+                <a href="{{ route('user.profile.credits') }}" class="px-5 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 rounded-2xl text-sm font-bold text-white transition-all active:scale-95 flex items-center space-x-2">
+                    <span>History</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </section>
+
         <!-- Account Details Form -->
         <section class="space-y-4">
             <div class="flex items-center space-x-2 px-1">

@@ -10,6 +10,22 @@ use Illuminate\Support\Facades\DB;
 
 class AdminCreditController extends Controller
 {
+    public function index()
+    {
+        $users = User::all();
+        // optionally load recent transactions or anything else
+        return view('admin.credits', compact('users'));
+    }
+
+    public function showUser(User $user)
+    {
+        $transactions = $user->creditTransactions()->latest()->get();
+        $totalSpent = $user->creditTransactions()->where('type', 'subtract')->sum('amount');
+        $totalAdded = $user->creditTransactions()->where('type', 'add')->sum('amount');
+
+        return view('admin.credits_user', compact('user', 'transactions', 'totalSpent', 'totalAdded'));
+    }
+
     public function manage(Request $request, User $user)
     {
         $request->validate([

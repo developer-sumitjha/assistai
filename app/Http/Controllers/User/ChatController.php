@@ -16,7 +16,7 @@ class ChatController extends Controller
      */
     public function history()
     {
-        $conversations = auth()->user()->conversations()->withCount('messages')->latest()->get();
+        $conversations = auth()->user()->conversations()->has('messages')->withCount('messages')->latest()->get();
         return view('pwa.chat_history', compact('conversations'));
     }
 
@@ -27,10 +27,15 @@ class ChatController extends Controller
     {
         $defaultModel = Setting::get('default_text_model', 'openai/gpt-3.5-turbo');
 
-        $conversation = auth()->user()->conversations()->create([
-            'title' => 'New Chat',
-            'model' => $defaultModel,
-        ]);
+        // Reuse an existing empty conversation if one exists
+        $conversation = auth()->user()->conversations()->doesntHave('messages')->latest()->first();
+
+        if (!$conversation) {
+            $conversation = auth()->user()->conversations()->create([
+                'title' => 'New Chat',
+                'model' => $defaultModel,
+            ]);
+        }
 
         return redirect()->route('user.chat.show', $conversation);
     }

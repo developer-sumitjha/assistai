@@ -16,14 +16,16 @@ Route::prefix('app')->name('user.')->group(function () {
     Route::get('/', [\App\Http\Controllers\User\UserAuthController::class, 'showOnboarding'])->name('onboarding');
     Route::get('/login', [\App\Http\Controllers\User\UserAuthController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [\App\Http\Controllers\User\UserAuthController::class, 'login']);
+    Route::get('/register', [\App\Http\Controllers\User\UserAuthController::class, 'showRegisterForm'])->name('register');
+    Route::post('/register', [\App\Http\Controllers\User\UserAuthController::class, 'register']);
     Route::post('/logout', [\App\Http\Controllers\User\UserAuthController::class, 'logout'])->name('logout');
-
     Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', function () {
             return view('pwa.dashboard');
         })->name('dashboard');
 
         Route::get('/profile', [\App\Http\Controllers\User\UserProfileController::class, 'show'])->name('profile');
+        Route::get('/profile/credits', [\App\Http\Controllers\User\UserProfileController::class, 'creditHistory'])->name('profile.credits');
         Route::patch('/profile', [\App\Http\Controllers\User\UserProfileController::class, 'update'])->name('profile.update');
         Route::patch('/profile/password', [\App\Http\Controllers\User\UserProfileController::class, 'updatePassword'])->name('profile.password');
 
@@ -41,6 +43,11 @@ Route::prefix('app')->name('user.')->group(function () {
         // Image to Image Feature
         Route::get('/image-to-image', [\App\Http\Controllers\User\ImageController::class, 'imageToImage'])->name('image_to_image');
         Route::post('/image-to-image/generate', [\App\Http\Controllers\User\ImageController::class, 'generateFromImage'])->name('image_to_image.generate');
+
+        // Text to Speech Feature
+        Route::get('/tts', [\App\Http\Controllers\User\TtsController::class, 'index'])->name('tts');
+        Route::post('/tts/generate', [\App\Http\Controllers\User\TtsController::class, 'generate'])->name('tts.generate');
+        Route::post('/tts/generate-script', [\App\Http\Controllers\User\TtsController::class, 'generateScript'])->name('tts.generateScript');
     });
 });
 
@@ -61,9 +68,11 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::post('/users/{user}/credits', [\App\Http\Controllers\Admin\AdminCreditController::class, 'manage'])->name('users.credits');
     Route::post('/users/{user}/password', [\App\Http\Controllers\Admin\AdminUserController::class, 'updatePassword'])->name('users.password');
 
-    Route::get('/settings', function () {
-        return view('admin.profile');
-    })->name('settings');
+    Route::get('/credits', [\App\Http\Controllers\Admin\AdminCreditController::class, 'index'])->name('credits');
+    Route::get('/credits/users/{user}', [\App\Http\Controllers\Admin\AdminCreditController::class, 'showUser'])->name('credits.user');
+
+    Route::get('/settings', [\App\Http\Controllers\Admin\AdminSettingsController::class, 'index'])->name('settings');
+    Route::patch('/settings', [\App\Http\Controllers\Admin\AdminSettingsController::class, 'update'])->name('settings.update');
 
     // AI Model Management
     Route::get('/models', [\App\Http\Controllers\Admin\AdminAiModelController::class, 'index'])->name('models');

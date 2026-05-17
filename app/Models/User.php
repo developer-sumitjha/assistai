@@ -73,4 +73,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(ImageGeneration::class);
     }
+
+    public function ttsGenerations()
+    {
+        return $this->hasMany(TtsGeneration::class);
+    }
 }

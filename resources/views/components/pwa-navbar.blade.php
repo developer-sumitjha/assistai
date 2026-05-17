@@ -63,7 +63,7 @@
 
         <!-- Options List (Scrollable) -->
         <div class="flex-1 overflow-y-auto min-h-0 px-6 space-y-4 pb-32 custom-scrollbar" style="touch-action: pan-y;">
-            <!-- Text to Text -->
+            <!-- Ask AI -->
             <a href="{{ route('user.chat.new') }}" class="block group">
                 <div
                     class="p-4 bg-white border border-slate-100 rounded-2xl shadow-sm group-active:scale-[0.98] transition-all hover:border-blue-100 hover:shadow-md">
@@ -80,7 +80,7 @@
                             <div>
                                 <h3
                                     class="text-sm font-black text-slate-700 group-hover:text-blue-600 transition-colors uppercase tracking-tight">
-                                    Text to Text</h3>
+                                    Ask AI</h3>
                                 <p class="text-[10px] text-slate-400 font-semibold capitalize mt-0.5">AI chatbot
                                     assistant</p>
                             </div>

@@ -20,6 +20,12 @@ class UserProfileController extends Controller
         ]);
     }
 
+    public function creditHistory()
+    {
+        $transactions = Auth::user()->creditTransactions()->latest()->get();
+        return view('pwa.credit_history', compact('transactions'));
+    }
+
     /**
      * Update the user's profile details.
      */

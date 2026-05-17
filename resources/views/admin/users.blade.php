@@ -177,7 +177,7 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Amount</label>
+                                <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Credits</label>
                                 <input type="number" name="amount" required min="1" placeholder="e.g. 100" 
                                     class="w-full px-5 py-4 bg-slate-50 rounded-3xl text-sm font-bold border-transparent focus:bg-white focus:ring-2 focus:ring-primary-purple/20 focus:border-primary-purple transition-all outline-none">
                             </div>
